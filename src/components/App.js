@@ -4,6 +4,8 @@ import SearchEngine from "./SearchEngine";
 import Forecast from "./Forecast";
 
 import "../styles.css";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function App() {
   const [query, setQuery] = useState();
@@ -87,7 +89,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>React Js Weather App</h1>
 
       {/* SearchEngine component */}
       <SearchEngine query={query} setQuery={setQuery} search={search} />

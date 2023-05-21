@@ -48,16 +48,29 @@ function Forecast({ weather }) {
       <div className="date">
         <span>{getCurrentDate()}</span>
       </div>
-      <div className="icon-temp">
+      <div className="temp">
         {data.condition.icon_url && (
-          <img src={data.condition.icon_url} alt={data.condition.description} />
+          <img src={data.condition.icon_url} alt={data.condition.description} className="temp-icon"/>
         )}
         {Math.round(data.temperature.current)}
-        <sup className="deg">°C</sup>
+        <sup className="temp-deg">°C</sup>
       </div>
+      <p className="weather-des">{data.condition.description}</p>
       <div className="weather-info">
-        <p>{data.condition.description}</p>
-        <p>Wind speed: {data.wind.speed}m/s</p>
+        <div className="col">
+          <i className="fas fa-duotone fa-wind"></i>
+          <div>
+            <p className="wind">{data.wind.speed}m/s</p>
+            <p>Wind speed</p>
+          </div>
+        </div>
+        <div className="col">
+          <i className="fas fa-duotone fa-water"></i>
+          <div>
+            <p className="humidity">{data.temperature.humidity}%</p>
+            <p>Humidity</p>
+          </div>
+        </div>     
       </div>
       <div className="forecast">
         <h3>5-Day Forecast:</h3>
@@ -74,7 +87,7 @@ function Forecast({ weather }) {
                   />
                 )}
                 <p className="day-temperature">
-                  {Math.round(day.temperature.day)}°C
+                  {Math.round(day.temperature.minimum)}°/ <span>{Math.round(day.temperature.maximum)}°</span>
                 </p>
               </div>
             ))}
