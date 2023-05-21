@@ -6,12 +6,13 @@ function SearchEngine({ query, setQuery, search }) {
       <input
         type="text"
         className="city-search"
-        placeholder="Search city"
+        placeholder="enter city name"
         name="query"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         onKeyPress={search}
       />
+      <button><i className="fas fa-search" style={{ fontSize: "18px" }}></i></button>
     </div>
   );
 }

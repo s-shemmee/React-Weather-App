@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 body {
   background-image: url("../images/background.jpg");
@@ -6,24 +7,134 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;  
   margin: 0;
   padding: 0;
 }
 
 .App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  margin: 5% auto;
-  width: 50%;
-  height: 50%;
+  margin: 50px auto 0;
+  width: 90%;
+  max-width: 700px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  padding: 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 20px 15px;
+}
+
+.SearchEngine {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 10px;
+} 
+
+.SearchEngine input {
+  width: 70%;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  padding: 2px 15px;
+  font-size: 16px;
+  outline: none;
+  background-color: #fff;
+  color: #555;
+}
+
+.SearchEngine input::placeholder {
+  color: #f06789;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.SearchEngine button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #f06789;
+  color: #fff;
+  font-size: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+.SearchEngine button:hover {
+  background-color: #fff;
+}
+
+.SearchEngine button:hover i {
+  color: #f06789;
+}
+
+.error-message {
+  display: block;
+  text-align: center;
+  color: #f06789;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: auto;
+}
+
+.city-name {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: oblique;
+}
+
+.temp {
+  font-size: 64px;
+  font-weight: 700;
+  color: #1e2432;
+  text-align: center;
+}
+
+.temp-deg {
+  font-size: 32px;
+}
+
+.temp-icon{
+  width: 20%;
+}
+
+.weather-des {
+  color: aliceblue;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 20px;
+  color: #1e2432;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  line-height: 1px;
+}
+
+.col i {
+  font-size: 40px;
+  margin-right: 5px;
 }
 
 .forecast-container {
@@ -37,9 +148,16 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .day-name {
+  font-size: 18px;
+  font-weight: 500;
   margin-bottom: 5px;
 }
 
@@ -51,6 +169,12 @@ body {
 
 .day-temperature {
   margin-top: 5px;
+  font-weight: 400;
+}
+
+.day-temperature span {
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .credit {
