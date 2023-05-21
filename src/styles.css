@@ -45,7 +45,7 @@ body {
 }
 
 .SearchEngine input::placeholder {
-  color: #f06789;
+  color: #555;
   font-weight: 500;
   font-style: italic;
 }
