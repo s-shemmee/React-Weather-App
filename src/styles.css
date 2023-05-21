@@ -52,3 +52,24 @@ body {
 .day-temperature {
   margin-top: 5px;
 }
+
+.credit {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
+
+.credit a {
+  color: #f06789;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.credit a:hover {
+  color: #a94b7e;
+}
