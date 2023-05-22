@@ -9,11 +9,15 @@
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@react-icons/all-files": "^4.1.0",
     "axios": "1.4.0",
     "csbbust": "1.0.1",
     "loader-utils": "3.2.1",
     "react": "18.2.0",
+    "react-animated-icons": "^1.0.0",
+    "react-animated-weather": "^4.0.1",
     "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
     "react-scripts": "5.0.1"
   },
   "devDependencies": {
