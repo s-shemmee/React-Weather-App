@@ -99,6 +99,7 @@ body {
 
 .temp-deg {
   font-size: 32px;
+  cursor: pointer;
 }
 
 .temp-icon{
@@ -132,9 +133,8 @@ body {
   line-height: 1px;
 }
 
-.col i {
-  font-size: 40px;
-  margin-right: 5px;
+.col p{
+  margin-left: 5px;
 }
 
 .forecast-container {
