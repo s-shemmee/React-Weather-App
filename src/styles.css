@@ -140,6 +140,9 @@ body {
 .forecast-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  color: #1e2432;
 }
 
 .day {
@@ -151,8 +154,12 @@ body {
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: aliceblue;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.day:hover {
+  background-color: #fff;
 }
 
 .day-name {
@@ -178,7 +185,7 @@ body {
 }
 
 .credit {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -186,6 +193,7 @@ body {
   text-align: center;
   font-size: 14px;
   color: #fff;
+  width: 100%;
 }
 
 .credit a {
@@ -196,4 +204,177 @@ body {
 
 .credit a:hover {
   color: #a94b7e;
+}
+
+/* Desktop view */
+@media screen and (min-width: 768px) {
+  .App {
+    margin-top: 50px;
+    margin-bottom: 100px; /* Increased margin for better spacing */
+  }
+
+  .credit {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0;
+    width: auto;
+  }
+}
+
+/* Tablet view */
+@media screen and (max-width: 767px) {
+  .App {
+    width: 80%;
+    padding: 20px;
+    margin-bottom: 80px; /* Adjusted margin for better spacing */
+  }
+
+  .SearchEngine input {
+    width: 60%;
+  }
+
+  .SearchEngine button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .temp {
+    font-size: 48px;
+  }
+
+  .temp-deg {
+    font-size: 24px;
+  }
+
+  .temp-icon {
+    width: 20%;
+  }
+
+  .weather-des {
+    font-size: 18px;
+  }
+
+  .weather-info {
+    font-size: 18px;
+  }
+
+  .col p {
+    margin-left: 5px;
+  }
+
+  .forecast-container {
+    margin-top: 20px;
+  }
+
+  .day {
+    flex: 2 2 calc(50% - 6px); /* Adjusted flex basis and margin */
+    padding: 3px;
+    margin: 3px;
+  }
+
+  .day-name {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .day-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .day-temperature {
+    font-size: 16px;
+  }
+
+  .credit {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    width: 100%;
+  }
+}
+
+/* Mobile view */
+@media screen and (max-width: 480px) {
+  .App {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 100px; /* Increased margin for better spacing */
+  }
+
+  .SearchEngine input {
+    width: 60%;
+  }
+
+  .SearchEngine button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .temp {
+    font-size: 36px;
+  }
+
+  .temp-deg {
+    font-size: 18px;
+  }
+
+  .temp-icon {
+    width: 10%;
+  }
+
+  .weather-des {
+    font-size: 16px;
+  }
+
+  .weather-info {
+    font-size: 16px;
+  }
+
+  .forecast-container {
+    margin-top: 5px;
+  }
+
+  .day {
+    flex: 2 2 calc(50% - 6px); /* Adjusted flex basis and margin */
+    padding: 3px;
+    margin: 3px;
+  }
+
+  .day-name {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .day-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .day-temperature {
+    font-size: 16px;
+  }
+
+  .credit {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    width: 100%;
+  }
 }
