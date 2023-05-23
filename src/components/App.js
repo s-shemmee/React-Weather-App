@@ -97,7 +97,7 @@ function App() {
         <>
           <br />
           <br />
-          <h4>Loading...</h4>
+          <h4>Searching..</h4>
         </>
       )}
 
