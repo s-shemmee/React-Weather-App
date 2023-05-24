@@ -2,7 +2,7 @@
 
 
 body {
-  background-image: url("../images/background.jpg");
+  background-image: url("../images/background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -192,7 +192,7 @@ body {
   margin-bottom: 20px;
   text-align: center;
   font-size: 14px;
-  color: #fff;
+  color: #8fc9da;
   width: 100%;
 }
 
@@ -298,7 +298,6 @@ body {
     margin-bottom: 20px;
     text-align: center;
     font-size: 14px;
-    color: #fff;
     width: 100%;
   }
 }
@@ -374,7 +373,6 @@ body {
     margin-bottom: 20px;
     text-align: center;
     font-size: 14px;
-    color: #fff;
     width: 100%;
   }
 }
