@@ -33,15 +33,14 @@ body {
 } 
 
 .SearchEngine input {
-  background-color: #fff;
+  width: 70%;
+  height: 40px;
   border: none;
   border-radius: 5px;
-  color: #555;
-  font-size: 16px;
-  height: 40px;
-  outline: none;
   padding: 2px 15px;
-  width: 70%;
+  font-size: 16px;
+  background-color: #fff;
+  color: #555;
 }
 
 .SearchEngine input::placeholder {
@@ -51,15 +50,15 @@ body {
 }
 
 .SearchEngine button {
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 50%;
-  background-color: #f06789;
-  color: #fff;
-  font-size: 20px;
-  outline: none;
-  cursor: pointer;
+  background-color: #84cef5;
+  border: none; 
+  border-radius: 9%; 
+  color: #fff; 
+  cursor: pointer; 
+  font-size: 20px; 
+  height: 44px; 
+  outline: none; 
+  width: 78px;
 }
 
 .SearchEngine button:hover {
