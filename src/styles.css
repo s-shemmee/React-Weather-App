@@ -36,9 +36,10 @@ body {
   width: 70%;
   height: 40px;
   border: none;
-  border-radius: 5px;
+  border-radius: 5px; /* Updated */
   padding: 2px 15px;
   font-size: 16px;
+  outline: none;
   background-color: #fff;
   color: #555;
 }
@@ -50,15 +51,15 @@ body {
 }
 
 .SearchEngine button {
-  background-color: #84cef5;
-  border: none; 
-  border-radius: 9%; 
-  color: #fff; 
-  cursor: pointer; 
-  font-size: 20px; 
-  height: 44px; 
-  outline: none; 
-  width: 78px;
+  width: 78px; /* Updated */
+  height: 44px; /* Updated */
+  border: none;
+  border-radius: 9%; /* Updated */
+  background-color: #84cef5; /* Updated */
+  color: #fff;
+  font-size: 20px;
+  outline: none;
+  cursor: pointer;
 }
 
 .SearchEngine button:hover {
