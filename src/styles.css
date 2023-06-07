@@ -153,12 +153,12 @@ body {
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
-  background-color: aliceblue;
+  background-color: #fff;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .day:hover {
-  background-color: #fff;
+  background-color: aliceblue;
 }
 
 .day-name {
