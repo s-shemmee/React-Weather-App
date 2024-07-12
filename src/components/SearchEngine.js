@@ -1,6 +1,13 @@
 import React from "react";
 
 function SearchEngine({ query, setQuery, search }) {
+  //handler function
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      search(e);
+    }
+  };
+
   return (
     <div className="SearchEngine">
       <input
@@ -10,9 +17,9 @@ function SearchEngine({ query, setQuery, search }) {
         name="query"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        onKeyPress={search}
+        onKeyPress={handleKeyPress}
       />
-      <button><i className="fas fa-search" style={{ fontSize: "18px" }}></i></button>
+      <button onClick={search}><i className="fas fa-search" style={{ fontSize: "18px" }}></i></button>
     </div>
   );
 }
