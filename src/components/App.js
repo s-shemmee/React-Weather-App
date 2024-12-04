@@ -7,11 +7,11 @@ import "../styles.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState("Rabat");
   const [weather, setWeather] = useState({
     loading: true,
     data: {},
-    error: false
+    error: false,
   });
 
   const toDate = () => {
@@ -27,48 +27,47 @@ function App() {
       "September",
       "October",
       "November",
-      "December"
+      "December",
     ];
-    const days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ];
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
     const currentDate = new Date();
-    const date = `${days[currentDate.getDay()]} ${currentDate.getDate()} ${months[currentDate.getMonth()]
-      }`;
+    const date = `${days[currentDate.getDay()]} ${currentDate.getDate()} ${
+      months[currentDate.getMonth()]
+    }`;
     return date;
-  };
-  //new search function
-  const search = async (event) => {
-    event.preventDefault();
-    if (event.type === "click" || (event.type === "keypress" && event.key === "Enter")) {
-      setWeather({ ...weather, loading: true });
-      const apiKey = "b03a640e5ef6980o4da35b006t5f2942";
-      const url = `https://api.shecodes.io/weather/v1/current?query=${query}&key=${apiKey}`;
-
-      await axios
-        .get(url)
-        .then((res) => {
-          console.log("res", res);
-          setWeather({ data: res.data, loading: false, error: false });
-        })
-        .catch((error) => {
-          setWeather({ ...weather, data: {}, error: true });
-          console.log("error", error);
-        });
-    }
   };
 
   useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          const { latitude, longitude } = position.coords;
+          try {
+            const response = await axios.get(
+              `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
+            );
+            const data = await response.data;
+            const city = data.address.city || data.address.town || data.address.village;
+            setQuery(city);
+          } catch (err) {
+            console.error("Failed to fetch city data:", err);
+          }
+        },
+        (err) => {
+          console.error("Geolocation error:", err.message);
+        }
+      );
+    } else {
+      console.error("Geolocation is not supported by your browser");
+    }
+  }, []);
+
+  
+  useEffect(() => {
     const fetchData = async () => {
-      const apiKey = "b03a640e5ef6980o4da35b006t5f2942";
-      const url = `https://api.shecodes.io/weather/v1/current?query=Rabat&key=${apiKey}`;
+      const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
+      const url = `https://api.shecodes.io/weather/v1/current?query=${query}&key=${apiKey}`;
 
       try {
         const response = await axios.get(url);
@@ -78,15 +77,12 @@ function App() {
         console.log("error", error);
       }
     };
-
     fetchData();
-  }, []);
+  }, [query]);
 
   return (
     <div className="App">
-
-      {/* SearchEngine component */}
-      <SearchEngine query={query} setQuery={setQuery} search={search} />
+      <SearchEngine query={query} setQuery={setQuery} />
 
       {weather.loading && (
         <>
@@ -101,15 +97,12 @@ function App() {
           <br />
           <br />
           <span className="error-message">
-            <span style={{ fontFamily: "font" }}>
-              Sorry city not found, please try again.
-            </span>
+            <span style={{ fontFamily: "font" }}>Sorry city not found, please try again.</span>
           </span>
         </>
       )}
 
       {weather && weather.data && weather.data.condition && (
-        // Forecast component
         <Forecast weather={weather} toDate={toDate} />
       )}
     </div>

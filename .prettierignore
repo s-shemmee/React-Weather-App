@@ -1,0 +1,6 @@
+# Ignore all MDX files to prevent unwanted JSX line wrapping
+# https://jasongerbes.com/blog/mdx-remove-unwanted-paragraph-tags
+*.mdx
+dist
+build
+node_modules

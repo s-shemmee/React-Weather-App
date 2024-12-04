@@ -1,26 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
-function SearchEngine({ query, setQuery, search }) {
-  //handler function
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      search(e);
-    }
+function SearchEngine({ query, setQuery }) {
+  const [value, setValue] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setQuery(value);
   };
 
   return (
-    <div className="SearchEngine">
+    <form className="SearchEngine" onSubmit={handleSubmit}>
       <input
         type="text"
         className="city-search"
-        placeholder="enter city name"
-        name="query"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        onKeyPress={handleKeyPress}
+        placeholder="Enter city name"
+        name="city"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
       />
-      <button onClick={search}><i className="fas fa-search" style={{ fontSize: "18px" }}></i></button>
-    </div>
+      <button type="submit">
+        <i className="fas fa-search" style={{ fontSize: "18px" }}></i>
+      </button>
+    </form>
   );
 }
 
