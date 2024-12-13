@@ -21,10 +21,52 @@ body {
   border-radius: 20px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   padding: 20px 15px;
+  
 }
 
+.button-container {
+  width: 200px;
+  height: 100px;
+  
+  margin-left: 50px; /* Απόσταση από την εικόνα */
+  color: #0f161b;
+  position: fixed;
+  right: 350px;
+  top: 450px;
+  font-size: larger;
+  font-weight: bold;
+  background-color: aqua;
+  vertical-align: middle; /* Ευθυγράμμιση στο κέντρο */
+}
+
+.textbox-container{
+  width: 200px;
+  height: 100px;
+  
+  margin-left: 50px; /* Απόσταση από την εικόνα */
+  color: #0f161b;
+  position: fixed;
+  right: 350px;
+  top: 450px;
+  font-size: large;
+  font-weight: bold;
+  vertical-align: middle; /* Ευθυγράμμιση στο κέντρο */
+}
+
+.submit-button{
+  width: 200px;
+  height: 100px;
+  color: #1d1b1c;
+  right: 350px;
+  font-size:x-large ; 
+  font-weight: bold;
+  top: 555px;
+  position: fixed;
+
+
+}
 .SearchEngine {
-  width: 100%;
+  width: 10%;
   display: flex;
   justify-content: space-around;
   align-items: center;
