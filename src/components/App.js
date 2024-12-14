@@ -5,7 +5,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 function MyButton({ onClick }) {
   return (
     <button onClick={onClick} className="button-container">
-      Άνοιγμα Textbox
+      Εισαγωγή Μηνύματος
     </button>
   );
 }
