@@ -1,7 +1,7 @@
 # React Weather App
 This is a web app developed as a final project for SheCodes React using React.js. It allows users to search for the weather conditions of any city in the world and provides current weather information. The app fetches weather data using the SheCodes Weather API.
 
-<img src="/workspaces/React-Weather-App/images/background.png" alt="Εικόνα" width="200">
+<img src="images/background.png" alt="Εικόνα" width="200">
 
 # Features
 - Users can search for weather conditions of any city in the world.
