@@ -27,12 +27,11 @@ body {
 .button-container {
   width: 200px;
   height: 100px;
-  
   margin-left: 50px; /* Απόσταση από την εικόνα */
   color: #0f161b;
   position: fixed;
   right: 250px;
-  top: 450px;
+  top: 380px;
   font-size: larger;
   font-weight: bold;
   background-color: aqua;
@@ -42,25 +41,25 @@ body {
 .textbox-container{
   width: 200px;
   height: 100px;
-  
   margin-left: 50px; /* Απόσταση από την εικόνα */
   color: #0f161b;
   position: fixed;
   right: 250px;
-  top: 450px;
+  top: 380px;
   font-size: large;
   font-weight: bold;
   vertical-align: middle; /* Ευθυγράμμιση στο κέντρο */
 }
 
 .submit-button{
+  background-color: #0c84da;
   width: 200px;
   height: 100px;
   color: #1d1b1c;
-  right: 250px;
   font-size:x-large ; 
   font-weight: bold;
-  top: 555px;
+  right: 250px;
+  top: 485px;
   position: fixed;
 
 
