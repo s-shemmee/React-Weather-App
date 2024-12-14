@@ -12,6 +12,7 @@
     "@react-icons/all-files": "^4.1.0",
     "axios": "1.4.0",
     "csbbust": "1.0.1",
+    "dotenv": "^16.4.7",
     "loader-utils": "3.2.1",
     "react": "18.2.0",
     "react-animated-icons": "^1.0.0",
