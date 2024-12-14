@@ -5,7 +5,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 function MyButton({ onClick }) {
   return (
     <button onClick={onClick} className="button-container">
-      Εισαγωγή Μηνύματος
+      Ειδοποίηση
     </button>
   );
 }
@@ -43,7 +43,7 @@ function App() {
               type="text"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              placeholder="Enter your text here"
+              placeholder="Εισαγωγή μηνύματος"
               className="textbox-container"
             />
           
