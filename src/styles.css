@@ -31,7 +31,7 @@ body {
   margin-left: 50px; /* Απόσταση από την εικόνα */
   color: #0f161b;
   position: fixed;
-  right: 350px;
+  right: 250px;
   top: 450px;
   font-size: larger;
   font-weight: bold;
@@ -46,7 +46,7 @@ body {
   margin-left: 50px; /* Απόσταση από την εικόνα */
   color: #0f161b;
   position: fixed;
-  right: 350px;
+  right: 250px;
   top: 450px;
   font-size: large;
   font-weight: bold;
@@ -57,7 +57,7 @@ body {
   width: 200px;
   height: 100px;
   color: #1d1b1c;
-  right: 350px;
+  right: 250px;
   font-size:x-large ; 
   font-weight: bold;
   top: 555px;
