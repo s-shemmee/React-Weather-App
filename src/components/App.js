@@ -48,7 +48,7 @@ function App() {
             />
           
             <button onClick={handleSubmit} className="submit-button">
-              Submit
+              Αποστολή Μηνύματος
             </button>
             
           </div>
