@@ -21,7 +21,7 @@ function App() {
 
   // Υποβολή του περιεχομένου του textbox
   const handleSubmit = () => {
-    alert(`Submitted value: ${inputValue}`);
+    alert(`Ειδοποίηση από το Helping Hand Application: ${inputValue}`);
     setTextboxVisible(false);
     setInputValue(""); // Καθαρισμός του input
   };
