@@ -1,1 +1,39 @@
-node_modules
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Build artifacts
+/build/
+/dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Cache files
+.cache/
+.parcel-cache/
+
+# Coverage reports
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Favicon/Icons (optional, if generated dynamically)
+favicon.ico
+favicon-*.png
